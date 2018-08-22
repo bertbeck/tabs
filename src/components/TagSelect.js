@@ -30,10 +30,13 @@ const styles = theme => ({
     // borderBottom: '1px solid #e8e8e8',
     borderTop: '1px solid red',
     borderBottom: '1px solid red',
-    height: 20,
+    height: 25,
     fontSize: 12,
     padding: 0,
     margin: 0,
+    width: 600,
+    backgroundColor: '#5393ff',
+    color: 'white',
     typography: {
       padding: theme.spacing.unit * 1,
       color: 'red'
@@ -117,13 +120,14 @@ class ScrollableTabsButtonAuto extends React.Component {
             textColor="primary"
             scrollable
             scrollButtons="auto"
+            style={{ minHeight: '25px'  }}
           >
-            <Tab label="Property2" />
-            <Tab label="Location" />
-            <Tab label="House Style" />
-            <Tab label="Schools" />
-            <Tab label="Special Features" />
-            <Tab label="History" />
+            <Tab label="Property2" style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Location" style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="House Style"  style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Schools" style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Special Features"  style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="History" style={{ color: 'white', minHeight: '25px' }}/>
           </Tabs>
         </AppBar>
         {value === 0 &&
