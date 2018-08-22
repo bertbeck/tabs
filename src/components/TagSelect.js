@@ -122,26 +122,30 @@ class ScrollableTabsButtonAuto extends React.Component {
             scrollButtons="auto"
             style={{ minHeight: '25px'  }}
           >
-            <Tab label="Property2" style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Location" style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="House Style"  style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Schools" style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Special Features"  style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="History" style={{ color: 'white', minHeight: '25px' }}/>
+            <Tab label="Destinations" style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Living Styles" style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Property Type"  style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Amenities" style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Activities"  style={{ color: 'white', minHeight: '25px'  }} />
+            <Tab label="Special" style={{ color: 'white', minHeight: '25px' }}/>
           </Tabs>
         </AppBar>
         {value === 0 &&
         <TabContainer style={{height:20}}>
-          <Checkbox label="Estatexx" value={true} name="Estate" />
-          <Checkbox label="Penthouse" value={true} name="Penthouse" />
-          <Checkbox label="Ranch" value={true} name="Ranchh" />
-          <Checkbox label="Colonial" value={true} name="Colonial" />
+          <Checkbox label="Town of Jackson, WY" value={true} name="Town of Jackson, WY" />
+          <Checkbox label="North of Jackson, WY" value={true} name="North of Jackson, WY" />
+          <Checkbox label="South of Jackson, WY" value={true} name="South of Jackson, WY" />
+          <Checkbox label="West of Jackson, WY" value={true} name="West of Jackson, WY" />
+          <Checkbox label="Teton Village, WY" value={true} name="Teton Village, WY" />
+          <Checkbox label="Western Ranches, WY" value={true} name="Western Ranches, WY" />
         </TabContainer>}
 
         {value === 1 &&
         <TabContainer>
-          <Checkbox label="USA North East" value={true} name="North East" />
-          <Checkbox label="USA South East" value={true} name="South East" />
+          <Checkbox label="Beach Living" value={true} name="Beach Living" />
+          <Checkbox label="Castle Living" value={true} name="Castle Living" />
+          <Checkbox label="Country Living" value={true} name="Country Living" />
+          <Checkbox label="Desert Living" value={true} name="Desert Living" />
           <Checkbox label="USA Midwest" value={true} name="Midwesth" />
           <Checkbox label="USA West Coast" value={true} name="West Coast" />
           <Checkbox label="Europe" value={true} name="West Coast" />
