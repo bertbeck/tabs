@@ -10,7 +10,7 @@ import Checkbox from './Checkbox';
 
 function TabContainer(props) {
   return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
+    <Typography component="div" style={{ textAlign: 'left', padding: 8 * 3 }}>
       {props.children}
     </Typography>
   );
@@ -24,26 +24,27 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     width: 600,
+    color: 'white',
     backgroundColor: theme.palette.background.paper,
   },
   tabsRoot: {
     // borderBottom: '1px solid #e8e8e8',
-    borderTop: '1px solid red',
-    borderBottom: '1px solid red',
+    //borderTop: '1px solid red',
+    //borderBottom: '1px solid red',
     height: 25,
     fontSize: 12,
     padding: 0,
     margin: 0,
     width: 600,
-    backgroundColor: '#5393ff',
-    color: 'white',
+    backgroundColor: '#a0a0a0',
+    color: 'black',
     typography: {
       padding: theme.spacing.unit * 1,
       color: 'red'
     },
   },
   tabsIndicator: {
-    backgroundColor: '#1890ff',
+    //backgroundColor: '#1890ff',
   },
   tabRoot: {
     textTransform: 'initial',
@@ -53,7 +54,7 @@ const styles = theme => ({
     marginRight: theme.spacing.unit * 1,
     typography: {
       padding: theme.spacing.unit * 1,
-      color: 'red'
+      //color: 'red'
     },
     fontFamily: [
       '-apple-system',
@@ -120,7 +121,7 @@ class ScrollableTabsButtonAuto extends React.Component {
             textColor="primary"
             scrollable
             scrollButtons="auto"
-            style={{ minHeight: '25px'  }}
+            style={{ minHeight: '35px'  }}
           >
             <Tab label="Destinations" style={{ color: 'white', minHeight: '25px'  }} />
             <Tab label="Living Styles" style={{ color: 'white', minHeight: '25px'  }} />
