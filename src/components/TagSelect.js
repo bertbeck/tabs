@@ -46,6 +46,7 @@ const styles = theme => ({
   },
   tabsIndicator: {
     //backgroundColor: '#1890ff',
+    color:"#eeeeee"
   },
   tabRoot: {
     textTransform: 'initial',
@@ -75,7 +76,7 @@ const styles = theme => ({
       opacity: 1,
     },
     '&$tabSelected': {
-      color: '#1890ff',
+      color: '#eeeeee',
       fontWeight: theme.typography.fontWeightMedium,
     },
     '&:focus': {
@@ -83,7 +84,6 @@ const styles = theme => ({
     },
   },
   tabSelected: {
-    backgroundColor: 'red',
     color: 'red'
   },
   typography: {
@@ -92,28 +92,56 @@ const styles = theme => ({
   },
 });
 
+const tabStyle = {
+  default_tab:{
+      color: '#ffffff',
+      minHeight:'25px'
+  },
+  active_tab:{
+    textColor: '#eeeeee',
+    minHeight:'25px'
+
+  }
+};
+
 class ScrollableTabsButtonAuto extends React.Component {
 
   state = {
     value: 0,
+    id:0,
     checkedA: true,
     checkedB: true,
     checkedF: true,
     checkedG: true,
     data:Dict.data,
     };
+
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked });
   };
 
+  getStyle (isActive) {
+    return isActive ? tabStyle.active_tab : tabStyle.default_tab
+  }
+
   handleChange2 = (event, value) => {
     this.setState({ value });
   };
-
+  getIndex(ele){
+    const labels = Object.keys(this.state.data);
+    for(let i = 0; i < labels.length; i++) {
+      if(labels[i] == ele) {
+        return i;
+      }
+    }
+  }
   render() {
     const { classes } = this.props;
     const { value } = this.state;
     const labels = Object.keys(this.state.data);
+    let count = 0;
+    console.log(this.state.id);
+    console.log(value);
     return (
       <div style={{width:'80%'}}>
     <div className={classes.root}>
@@ -129,8 +157,8 @@ class ScrollableTabsButtonAuto extends React.Component {
           >
           {
             labels.map((ele)=>{
-              console.log(ele);
-             return <Tab label={ele} style={{ color: 'white', minHeight: '25px'  }} />
+              const id = this.getIndex(ele);
+             return <Tab label={ele} style={this.getStyle(value === id)}/>
             })
           }
           </Tabs>
@@ -139,7 +167,7 @@ class ScrollableTabsButtonAuto extends React.Component {
         <TabContainer style={{height:20}}>
         {
           this.state.data[labels[value]].map(ele => {
-            return <Checkbox label={ele} value={true} name={ele} />
+            return <Checkbox label={ele} value={true} name={ele}/>
           })
         }
         </TabContainer>
