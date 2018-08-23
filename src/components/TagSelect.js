@@ -80,7 +80,10 @@ const styles = theme => ({
       color: '#40a9ff',
     },
   },
-  tabSelected: {},
+  tabSelected: {
+    backgroundColor: 'red',
+    color: 'red'
+  },
   typography: {
     padding: theme.spacing.unit * 1,
     color: 'red'
@@ -114,13 +117,11 @@ class ScrollableTabsButtonAuto extends React.Component {
     <div className={classes.root}>
         <AppBar position="static" color="default">
           <Tabs
-            classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
+            classes={{ root: classes.tabsRoot,  selected: classes.tabSelected, indicator: classes.tabsIndicator }}
             value={value}
             onChange={this.handleChange2}
             indicatorColor="primary"
             textColor="primary"
-            scrollable
-            scrollButtons="auto"
             style={{ minHeight: '35px'  }}
           >
             <Tab label="Destinations" style={{ color: 'white', minHeight: '25px'  }} />

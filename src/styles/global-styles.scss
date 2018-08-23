@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body.fontLoaded {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#app {
+  background-color: #fafafa;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+p,
+label {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.5em;
+}
+
+#rDrawer span,svg {
+  color:#ccc; //!important;
+  font-weight: 100;
+}
+#rDrawer .sidebaricon {
+  margin-left:2px;
+  font-size:24px;
+  color: #ccc !important;
+}#rDrawer .sidebaricon:hover {
+
+  color: white !important;
+}
+#rDrawer .subsidebaricon {
+  margin-left:15px;
+  margin-right: 2px!important;
+  font-size:14px;
+  color:white!important;
+}
+.submenuicon {
+  margin-right:8px;
+}

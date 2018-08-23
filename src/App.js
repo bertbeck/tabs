@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './style.css';
 import TagSelect from './components/TagSelect';
 
 class App extends Component {

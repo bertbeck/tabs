@@ -1,0 +1,418 @@
+body {
+  background-color:black;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+
+.navbar-brand {
+  padding-top: 12px;
+  padding-left: 22px;
+}
+
+.navbar-default {
+  background-color:black;
+  color: white;
+}
+
+.sidebar ul li a.active {
+ background-color:black !important;
+}
+
+#app {
+  background:black !important;
+  margin-bottom: 0px;
+}
+
+#page-wrapper {
+  padding: 0px !important;
+  padding-top: 53px !important;
+  background: #343548 ;
+  color: #eee;
+}
+
+.page-with-title {
+  padding-top:70px;
+}
+
+.page-content {
+  min-height: 80vh;
+}
+
+.nav>li>a, .sidebar ul li a.active {
+  color: #eee;
+}
+
+.sidebar ul li {
+  border: none !important;
+}
+
+@media (min-width: 768px) {
+   #page-wrapper {
+    border-left: 1px solid black !important;
+    margin-left:200px !important;
+ }
+
+ #page-wrapper {
+  border-left: 1px solid black !important;
+  margin-left:200px !important;
+}
+
+}
+
+.PageForCopy {
+  margin: 64px;
+}
+.CopyHeader {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+.Copy {
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 18px;
+
+}
+
+/* react-table styles... right now, make them match even if striped */
+.ReactTable.-striped .rt-tr.-odd {
+  padding-top:8px;
+  background: rgba(61, 67, 98,0.9);
+  margin-left: 20px;
+  margin-right: 12px;
+  border-left: #4e8dc3 3px solid;
+  margin-bottom: 12px;
+}
+
+.ReactTable.-striped .rt-tr.-even {
+  padding-top:8px;
+  background: rgba(61, 67, 98,0.8);
+  margin-left: 20px;
+  margin-right: 12px;
+  border-left: #4e8dc3 3px solid;
+  margin-bottom: 12px;
+}
+
+/* on hover */
+.ReactTable.-highlight .rt-tbody .rt-tr:not(.-padRow):hover {
+  background: rgba(200,30,30,0.4);
+}
+
+/* column headers */
+.ReactTable .rt-thead .rt-tr {
+  color: gray;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-bottom:8px;
+}
+
+/* turning diamond for subcomponents */
+.ReactTable .rt-expander {
+  margin: 0 2px;
+}
+.ReactTable .rt-expander:after {
+    border-top: 10px solid rgba(200,200,200,0.8);
+}
+
+.ReactTable .-pagination input, .ReactTable .-pagination select {
+   background: none;
+
+}
+
+.ReactTable a {
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.ReactTable a:hover {
+  color: #bbc;
+  transition: all 0.5s ease;
+}
+
+.ReactTable .-pagination .-btn {
+  color: #eee;
+}
+
+.ReactTable .-pagination .-pageJump input {
+  width: 54px;
+  text-align: center;
+}
+
+.-totalPages {
+  padding-left:12px;
+}
+
+.ReactTable .rt-thead .rt-th.-cursor-pointer:focus, .ReactTable .rt-thead .rt-td.-cursor-pointer:focus {
+  outline: none;
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc, .ReactTable .rt-thead .rt-td.-sort-asc {
+  box-shadow: inset 0 3px 0 0 rgba(90,0,0,0.6);
+}
+
+.ReactTable .rt-thead .rt-resizable-header-content {
+  color: #aaa;
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc .rt-resizable-header-content::after, .ReactTable .rt-thead .rt-td.-sort-asc {
+  font-size: 10px;
+  content: " ▲";
+}
+
+.ReactTable .rt-thead .rt-th.-sort-desc .rt-resizable-header-content::after, .ReactTable .rt-thead .rt-td.-sort-asc {
+  font-size: 10px;
+  content: " ▼";
+}
+
+.ReactTable .rt-thead.-filters input, {
+  background:#777;
+  margin-left: 20px;
+  color: white;
+}
+
+/* *********************************
+   sidebar (left) navigation and styles
+   only for views greater than 800px
+   ******************************** */
+
+   nav table.table {
+     margin-bottom:0px;
+   }
+
+   nav table.table a {
+    color: #bbc;
+    transition: all 0.5s ease;
+   }
+
+   nav table.table a:hover {
+    color: white;
+    transition: all 0.5s ease;
+   }
+
+   .nav .open>a, .nav .open>a:focus, .nav .open>a:hover,
+   .nav>li>a:focus, .nav>li>a:hover {
+    background: none;
+    color: #bbe;
+    transition: all 0.5s ease;
+   }
+
+   @media screen and (min-width: 800px) {
+    .sidebar-desktop {
+        display: block;
+        height: 100vH;
+        width: 3.75rem;
+        width: 200px;
+        position: fixed;
+        left: 0;
+        top: 52px;
+        box-shadow: 1px 0 4px 0 rgba(0,0,0,.25);
+        box-shadow: 0.0625rem 0 0.25rem 0 rgba(0,0,0,.25);
+        z-index: 50000;
+        overflow: hidden;
+        transition: width .5s ease;
+     }
+
+     .sidebar-nav {
+       background: black;
+     }
+
+     .sidebar-nav .panel-title {
+       height: 22px;
+     }
+     .sidebaricon {
+      transition: all 0.5s ease;
+      font-size:22px;
+
+     }
+
+     .sidebaricon-2nd {
+
+     }
+
+     .sidebarlink {
+       padding-left: 16px;
+      opacity:1;
+      display:inline-block;
+      width: auto;
+      height: auto;
+    /*  transition: all 0.5s ease; */
+    }
+
+    .sidebarlink-2nd {
+       font-size:14px;
+      line-height: 32px;
+      padding-left: 6px;
+      font-weight: 100;
+    }
+
+    .sidebarbadge {
+      position: relative;
+      font-size: 11px;
+      font-weight: 100;
+      padding: 0px 3px;
+      top: -2px;
+      left: 24px;
+    }
+
+     /*** showleft: open sidebar **********/
+     #wrapper.showleft .sidebar-desktop {
+         width: 200px;
+     }
+
+     #wrapper.showleft .navpanel {
+
+         width: 210px;
+         margin: auto;
+
+         max-height: 100vh;
+         overflow-y: auto;
+
+     }
+
+
+    /* *** minleft: when sidebar minimized but visible ***/
+
+     #wrapper.minleft .sidebarlink {
+       opacity: 0;
+       white-space: nowrap;
+       width:0px;
+     }
+
+     #wrapper.minleft.sidebarlink .sidebarlink-2nd {
+      opacity: 0;
+      white-space: nowrap;
+      width:0px;
+
+    }
+
+     #wrapper.minleft .sidebaricon {
+      /* padding-left: 8px; */
+    }
+
+    #wrapper.minleft .sidebaricon-2nd {
+      /* padding-left: 8px; */
+    }
+
+    #wrapper.minleft .sidebarbadge {
+      position: relative;
+      top: -23px;
+      left: 16px;
+    }
+
+     #wrapper.minleft .sidebar-desktop {
+        width: 70px;
+    }
+
+    #wrapper.minleft #page-wrapper {
+       margin-left: 70px !important;
+       transition: margin .5s ease;
+    }
+
+    #wrapper.minleft .navpanel {
+        width: 68px;
+        margin-left:-4px;
+        text-align: center;
+    }
+
+    /** hideleft: when sidebar hidden, but showing open widget **/
+    #wrapper.hideleft .sidebar-desktop {
+        width: 0px;
+    }
+
+      #wrapper .sidebar-visible {
+          margin-left: 220px;
+      }
+
+      #wrapper .sidebar-hidden {
+          margin-left: 0px;
+      }
+    }
+
+
+    /* ****  panel styles for sidebar navigation **** /
+    /* panel-based accordian */
+    .panel-title a {
+      color: #ccc;
+    }
+
+    .panel-title a:hover {
+      text-decoration: none;
+      color: #889;
+    }
+
+    .panel {
+      border: none;
+    }
+    .panel-default>.panel-heading+.panel-collapse>.panel-body,
+    .panel-default > .panel-heading + .panel-collapse > .panel-body {
+      border-top-color: #3f3e3f;
+      background: #223;
+      padding:4px;
+      padding-left: 60px;
+  }
+    .panel-default>.panel-heading {
+      background:black !important;
+      padding-left: 26px;
+      padding-top: 32px;
+    }
+
+    .panel-group .panel+.panel {
+      margin-top: 0px;
+  }
+
+  /* ***********************************
+     material-ui for Realm
+     *********************************** */
+     .MuiButton-textPrimary-2073 {
+      color: #dbdde9 ;
+  }
+
+.MuiDefault {
+    color: #ccc ;
+  }
+
+  .MuiDefault:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+/* ***************************************************
+//
+// for subcomponent editing for reacttable
+//
+// *************************************************** */
+.editSection {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.editSpecialties {
+  margin-top: 12px;
+  width: 250px;
+}
+
+.editDescription {
+  margin-top: 12px;
+  width: 250px;
+}
+
+/* brokerage address subcomponent */
+.brokerage-address, .editArea {
+  padding-left: 40px;
+  margin-bottom: 12px;
+}
+
+.editTextField {
+  margin-left: 12px;
+  margin-right: 12px;
+  width: 200px;
+  color: white;
+}
