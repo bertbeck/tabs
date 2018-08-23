@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from './Checkbox';
+import Dict from './data.json';
 
 function TabContainer(props) {
   return (
@@ -36,7 +37,7 @@ const styles = theme => ({
     padding: 0,
     margin: 0,
     width: 600,
-    backgroundColor: '#a0a0a0',
+    backgroundColor: '#00b0ff',
     color: 'black',
     typography: {
       padding: theme.spacing.unit * 1,
@@ -50,6 +51,7 @@ const styles = theme => ({
     textTransform: 'initial',
     minWidth: 72,
     height: 100,
+    backgroundColor:"red",
     fontWeight: theme.typography.fontWeightRegular,
     marginRight: theme.spacing.unit * 1,
     typography: {
@@ -98,8 +100,8 @@ class ScrollableTabsButtonAuto extends React.Component {
     checkedB: true,
     checkedF: true,
     checkedG: true,
-  };
-
+    data:Dict.data,
+    };
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked });
   };
@@ -111,7 +113,7 @@ class ScrollableTabsButtonAuto extends React.Component {
   render() {
     const { classes } = this.props;
     const { value } = this.state;
-
+    const labels = Object.keys(this.state.data);
     return (
       <div style={{width:'80%'}}>
     <div className={classes.root}>
@@ -122,27 +124,27 @@ class ScrollableTabsButtonAuto extends React.Component {
             onChange={this.handleChange2}
             indicatorColor="primary"
             textColor="primary"
-            style={{ minHeight: '35px'  }}
+            style={{ minHeight: '35px' }}
+            scrollable
           >
-            <Tab label="Destinations" style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Living Styles" style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Property Type"  style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Amenities" style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Activities"  style={{ color: 'white', minHeight: '25px'  }} />
-            <Tab label="Special" style={{ color: 'white', minHeight: '25px' }}/>
+          {
+            labels.map((ele)=>{
+              console.log(ele);
+             return <Tab label={ele} style={{ color: 'white', minHeight: '25px'  }} />
+            })
+          }
           </Tabs>
         </AppBar>
-        {value === 0 &&
-        <TabContainer style={{height:20}}>
-          <Checkbox label="Town of Jackson, WY" value={true} name="Town of Jackson, WY" />
-          <Checkbox label="North of Jackson, WY" value={true} name="North of Jackson, WY" />
-          <Checkbox label="South of Jackson, WY" value={true} name="South of Jackson, WY" />
-          <Checkbox label="West of Jackson, WY" value={true} name="West of Jackson, WY" />
-          <Checkbox label="Teton Village, WY" value={true} name="Teton Village, WY" />
-          <Checkbox label="Western Ranches, WY" value={true} name="Western Ranches, WY" />
-        </TabContainer>}
 
-        {value === 1 &&
+        <TabContainer style={{height:20}}>
+        {
+          this.state.data[labels[value]].map(ele => {
+            return <Checkbox label={ele} value={true} name={ele} />
+          })
+        }
+        </TabContainer>
+
+        {/* {value === 1 &&
         <TabContainer>
           <Checkbox label="Beach Living" value={true} name="Beach Living" />
           <Checkbox label="Castle Living" value={true} name="Castle Living" />
@@ -165,7 +167,7 @@ class ScrollableTabsButtonAuto extends React.Component {
         {value === 3 && <TabContainer>Item Four</TabContainer>}
         {value === 4 && <TabContainer>Item Five</TabContainer>}
         {value === 5 && <TabContainer>Item Six</TabContainer>}
-        {value === 6 && <TabContainer>Item Seven</TabContainer>}
+        {value === 6 && <TabContainer>Item Seven</TabContainer>} */}
       </div>
       </div>
     );
