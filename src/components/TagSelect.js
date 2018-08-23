@@ -113,7 +113,7 @@ class ScrollableTabsButtonAuto extends React.Component {
     checkedB: true,
     checkedF: true,
     checkedG: true,
-    data:Dict.data,
+    data:Dict.matchItems,
     };
 
   handleChange = name => event => {
