@@ -154,6 +154,7 @@ class ScrollableTabsButtonAuto extends React.Component {
             textColor="primary"
             style={{ minHeight: '35px' }}
             scrollable
+            scrollButtons="off"
           >
           {
             labels.map((ele)=>{
