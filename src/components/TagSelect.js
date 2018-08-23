@@ -149,12 +149,14 @@ class ScrollableTabsButtonAuto extends React.Component {
           <Tabs
             classes={{ root: classes.tabsRoot,  selected: classes.tabSelected, indicator: classes.tabsIndicator }}
             value={value}
+            contentContainerStyle={{position: "fixed", bottom:"0"}}
             onChange={this.handleChange2}
             indicatorColor="primary"
             textColor="primary"
             style={{ minHeight: '35px' }}
             scrollable
-            scrollButtons="off"
+            scrollButtons='auto'
+            center
           >
           {
             labels.map((ele)=>{
