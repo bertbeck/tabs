@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './style.css';
 import TagSelect from './components/TagSelect';
+import TabTest from './components/TabTest';
 
 class App extends Component {
   render() {
@@ -13,7 +14,10 @@ class App extends Component {
           <h5>Copyright (c) 2018 Beckmann Consulting LLC</h5>
         </header>
 
-<TagSelect />
+        <TagSelect />
+        <div style={{padding: 24}}>
+          <TabTest />
+        </div>
 
       </div>
     );
