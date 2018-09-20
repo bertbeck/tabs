@@ -151,7 +151,7 @@ class ScrollableTabsButtonAuto extends React.Component {
             value={value}
             contentContainerStyle={{position: "fixed", bottom:"0"}}
             onChange={this.handleChange2}
-            indicatorColor="primary"
+            indicatorColor="none"
             textColor="primary"
             style={{ minHeight: '35px' }}
             scrollable

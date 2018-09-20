@@ -1,11 +1,13 @@
 {"matchItems":{
-    "Destinations":["Town of Jackson, WY"
+    "Destinations":[
+      "Town of Jackson, WY"
       ,"North of Jackson, WY"
       ,"South of Jackson, WY"
       ,"Teton Village, WY"
       ,"South of Jackson, WY"
     ],
-    "LivingStyles":["Beach Living"
+    "LivingStyles":[
+      {"Beach Living": true}
       ,"Castle Living"
       ,"Country Living"
       ,"Desert Living"
